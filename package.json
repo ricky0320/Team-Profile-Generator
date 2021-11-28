@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "test": "jest --verbose test/*"
+  },
+  
+  "devDependencies": {
+    "jest": "^27.3.1"
+  },
+  "dependencies": {
+    "inquirer": "^8.2.0"
+  }
+}
+
