@@ -12,7 +12,7 @@ const generateHTML = (data) => {
         <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
           rel="stylesheet">
-        <link rel="stylesheet" href="./styles.css" />
+        <link rel="stylesheet" href="./style.css" />
         <title>Team Profile Generator</title>
 
 
@@ -31,7 +31,7 @@ const generateHTML = (data) => {
     `;
 };
 
-const createExtraInfo = (element) => {
+const createInfo = (element) => {
   if (element.getRole() === 'Manager') {
       return `<p class="subtitle-5">Office No.:${(element.officeNumber)}</p>`;
   }
@@ -46,9 +46,7 @@ const createExtraInfo = (element) => {
 }
 
 const createIcon = (element) => {
-  if (element.getRole() === 'Manager') { return `<span class="material-icons-outlined">
-  meeting_room
-  </span>`; }
+  if (element.getRole() === 'Manager') { return `<span class="material-icons">meeting_room</span>`; }
 
   if (element.getRole() === 'Engineer') { return `<span class="material-icons">engineering</span>`; }
 

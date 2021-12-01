@@ -1,26 +1,36 @@
 const { TestWatcher } = require('@jest/core')
 const Employee = require('../lib/Employee')
 
-test('test employee name',() => {
-    //create new employee for test
-    const Ben = new Employee('Ben')
-    expect(Ben.getName()).toBe('Ben');
-})
+describe('Employee', () => {
+    describe('getName', () => {
+        test('this should return an employee name', () => {
+            const str = 'ben';
+            const result = new Employee(str, '123', 'ben@email').getName()
+            expect(result).toEqual(str);
+        })
+    })
 
-test('test employee id',() => {
-    //create new employee for test
-    const Ben = new Employee('123')
-    expect(Ben.getId()).toEqual('123');
-})
+    describe('getId', () => {
+        test('this should return an employee id', () => {
+            const str = '123';
+            const result = new Employee('ben', str, 'ben@email').getId();
+            expect(result).toEqual(str);
+        })
+    })
 
-test('test employee email',() => {
-    //create new employee for test
-    const Ben = new Employee('ben@gmail.com')
-    expect(Ben.getEmail()).toEqual('ben@gmail.com');
-})
+    describe('getEmail', () => {
+        test('this should return email address', () => {
+            const str = 'ben@email';
+            const result = new Employee('ben', '123', str).getEmail();
+            expect(result).toEqual(str);
+        })
+    })
 
-test('test employee role',() => {
-    //create new employee for test
-    const role = new Employee('Employee')
-    expect(role.getRole()).toBe('Employee');
-})
+    describe("getRole", () => {
+        test("this should return the role of the employee", () => {
+            const role = "Employee";
+            const result = new Employee('ben', '123', 'ben@').getRole();
+            expect(result).toEqual(role);
+        });
+    });
+});

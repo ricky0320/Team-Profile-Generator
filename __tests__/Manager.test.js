@@ -1,32 +1,44 @@
 const { TestWatcher } = require('@jest/core')
 const Manager = require('../lib/Manager')
 
-test('test Manager name',() => {
-    //create new Manager for test
-    const Ben = new Manager('Ben')
-    expect(Ben.getName()).toBe('Ben');
-})
+describe('Manager', () => {
+    describe('getName', () => {
+        test('this should return an Manager name', () => {
+            const str = 'ben';
+            const result = new Manager(str, '123', 'ben@email', '4155259106').getName()
+            expect(result).toBe(str);
+        })
+    })
 
-test('test Manager id',() => {
-    //create new Manager for test
-    const Ben = new Manager('123')
-    expect(Ben.getId()).toBe('123');
-})
+    describe('getId', () => {
+        test('this should return a Manager id', () => {
+            const str = '123';
+            const result = new Manager('ben', str, 'ben@email', '4155259106').getId();
+            expect(result).toEqual(str);
+        })
+    })
 
-test('test Manager email',() => {
-    //create new Manager for test
-    const Ben = new Manager('ben@gmail.com')
-    expect(Ben.getEmail()).toBe('ben@gmail.com');
-})
+    describe('getEmail', () => {
+        test('this should return email address', () => {
+            const str = 'ben@email';
+            const result = new Manager('ben', '123', str, '4155259106').getEmail();
+            expect(result).toEqual(str);
+        })
+    })
 
-test('test Manager role',() => {
-    //create new Manager for test
-    const role = new Manager('Manager')
-    expect(role.getRole()).toBe('Manager');
-})
+    describe('getRole', () => {
+        test('this should return the role of the Manager', () => {
+            const role = "Manager";
+            const result = new Manager('ben', '123', 'ben@email', '4155259106').getRole();
+            expect(result).toEqual(role);
+        });
+    });
 
-test('test Manager number',() => {
-    //create new Manager for test
-    const num = new Manager('123-456-7890')
-    expect(num.getOfficeNumber()).toBe('123-456-7890');
-})
+    describe('getOfficeNumber', () => {
+        test('this should return the office number', () => {
+            const str = '4155259106';
+            const result = new Manager('ben', '123', 'ben@email', str).getOfficeNumber();
+            expect(result).toEqual(str);
+        });
+    });
+});

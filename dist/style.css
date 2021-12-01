@@ -11,8 +11,7 @@ html {
     color: lighty;
     text-align: center;
     height: 100px;
-    background-image: linear-gradient(yellow, green);
-    color: black!important;
+    background-color: rgb(97, 65, 212);
     padding-top: 20px;
     border-bottom: 10px solid black;
 }
@@ -23,9 +22,15 @@ html {
     font-family: 'Nunito Sans', sans-serif;
 }
 
+.button:hover {
+    font-weight: bolder;
+    font-size: larger;
+}
+
 footer {
-    color: #1db954;
+    color: blue;
     background-color: black;
+    font-size: 2rem;
 }
 
 #card-size {

@@ -1,6 +1,7 @@
 const { ENGINE_METHOD_RAND } = require('constants');
 const fs = require('fs');
 const inquirer = require('inquirer');
+const generateHTML = require('./src/generateHTML')
 
 // adding classes
 const Employee = require('./lib/Employee.js')
@@ -76,7 +77,7 @@ const init = () => { //prompt mananger for office no., call repeat() asking  the
 inquirer.prompt([{ //asking for the office number
   type: 'input',
   name: 'extraInfo',
-  message: 'Hi manager, please your office phone number: ',
+  message: 'Hi manager, please enter your office phone number: ',
   validate: extraInput => { if (extraInput) { return true; } else { return false; } }
 }]).then(({ role, extraInfo }) => {
   role = 'manager'; //set the role to manager, then call repeat function
