@@ -19,14 +19,17 @@ Team Profile Generator will generate an html page that display each team member'
 ## Installation
 $git clone https://github.com/ricky0320/team-profile-generator.git<br />$rm package.json<br />$npm init<br />$npm install inquirer (@root)<br />$npm install jest --save-dev
 
+## Screenshot
+![Screenshot](./team-builder.jpg)
+
 ## Usage
 Here is the link to the video:https://watch.screencastify.com/v/Caa6xnyOsTAO9WqcE0ZL 
 
 ## Credits
-Created by:  
-Ricky Leung
+Created by:<br/>
+Ricky Leung<br/>
 
-Collaborators/Advisers:
+Collaborators/Advisers:<br/>
 Kosal Cheykim
 
 ## License

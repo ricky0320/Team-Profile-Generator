@@ -1,0 +1,49 @@
+html {
+    background-color: black!important;
+}
+
+.title {
+    font-family: 'Nunito Sans', sans-serif;
+    color: white;
+}
+
+.jumbotron {
+    color: lighty;
+    text-align: center;
+    height: 100px;
+    background-color: rgb(97, 65, 212);
+    padding-top: 20px;
+    border-bottom: 10px solid black;
+}
+
+.button {
+    background-color: cornflowerblue;
+    color: white;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.button:hover {
+    font-weight: bolder;
+    font-size: larger;
+}
+
+footer {
+    color: blue;
+    background-color: black;
+    font-size: 2rem;
+}
+
+#card-size {
+    height: 300px!important;
+    width: 300px!important;
+    margin: 10px;
+    color: black!important;
+}
+
+@media screen and (max-width: 1200px) {
+    /* tile {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap
+    } */
+}
